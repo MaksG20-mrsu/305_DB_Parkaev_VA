@@ -13,7 +13,7 @@ $groups = $pdo->query("
     WHERE CAST(strftime('%Y', student_card.end_date) AS INTEGER) <= CAST(strftime('%Y', 'now') AS INTEGER)
     ORDER BY study_group.name
 ")->fetchAll(PDO::FETCH_COLUMN);
-echo "Введите номер группы (1–" . count($groups) . ") или её название (точно как в списке).\n";
+echo "Введите номер группы (1–" . count($groups) . ") или её название GI.\n";
 echo "Нажмите Enter для вывода студентов по всем группам: ";
 $input = trim(fgets(STDIN));
 $groupFilter = null;
