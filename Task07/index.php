@@ -52,7 +52,7 @@ if (file_exists($DB_PATH)) {
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Students</title>
+    <title>Студенты</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 20px; }
         table { border-collapse: collapse; width: 100%; }
@@ -63,10 +63,10 @@ if (file_exists($DB_PATH)) {
 </head>
 <body>
 
-<h2>Students (graduation year ≤ <?= date('Y') ?>)</h2>
+<h2>Студенты (дата окончания ≤ <?= date('Y') ?>)</h2>
 
 <form method="get">
-    Group:
+    Группа:
     <select name="group">
         <option value="">— all groups —</option>
         <?php foreach ($groups as $g): ?>
@@ -81,17 +81,17 @@ if (file_exists($DB_PATH)) {
 <br>
 
 <?php if (empty($students)): ?>
-    <p>No students found.</p>
+    <p>Нет студентов</p>
 <?php else: ?>
     <table>
         <thead>
         <tr>
-            <th>Group</th>
-            <th>Speciality</th>
-            <th>Full Name</th>
-            <th>Sex</th>
-            <th>Birth Date</th>
-            <th>Card ID</th>
+            <th>Группа</th>
+            <th>Специальность</th>
+            <th>ФИО</th>
+            <th>Пол</th>
+            <th>Дата Рождения</th>
+            <th>Номер студенческого</th>
         </tr>
         </thead>
         <tbody>
